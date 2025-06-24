@@ -34,17 +34,19 @@
     margin-top: 0;
     color: #00ccff;
   }
-  .profile-image {
-    max-width: 300px;
-    display: block;
-    margin: 20px auto;
+  .show-button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+    background-color: #00ccff;
+    color: #000000;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 204, 255, 0.5);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
   }
-  .profile-image:hover {
-    transform: scale(1.05);
+  .show-button:hover {
+    background-color: #00ffff;
   }
   #popup {
     display: none;
@@ -102,8 +104,7 @@
 
 <main>
   <h2>My ID</h2>
-  <img src="https://i.imgur.com/0y8Ftya.jpg" alt="My ID" class="profile-image" onclick="openPopup()" />
-  <p>Click the ID photo to view larger.</p>
+  <button class="show-button" onclick="openPopup()">Show ID</button>
 </main>
 
 <div id="popup" onclick="closePopup()">
